@@ -142,7 +142,7 @@ function latest_films_shortcode() {
     if($my_query->have_posts()):
         while($my_query->have_posts()) : $my_query->the_post();
             //$custom = get_post_custom( get_the_ID() );
-            echo "<p>".get_the_title()."</p>";
+            echo "<p><a href=".get_the_permalink()." title=".get_the_title().'">'.get_the_title()."</a></p>";
             //echo "<p>".get_the_content()."</p>";
         endwhile;
         wp_reset_postdata();
